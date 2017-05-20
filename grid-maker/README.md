@@ -11,4 +11,4 @@
 
 
 ## What it looks like
-![Screenshot](/public/images/grid.png)
+![Screenshot](/grid-maker/public/images/grid.png)
