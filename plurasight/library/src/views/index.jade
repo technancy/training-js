@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    title Storystrap Template
+    meta(name='generator', content='Bootply')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    //- bower:css
+    link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+    //- endbower
+    //- bower:js
+    script(src='/lib/jquery/dist/jquery.js')
+    script(src='/lib/bootstrap/dist/js/bootstrap.js')
+    //- endbower
+    //- inject:css
+    link(rel="stylesheet", href="/css/styles.css")
+    //- endinject
+    //- inject:js
+    script(src="/js/app.js")
+    //- endinject
+    //if lt IE 9
+      script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+  body
+    header.navbar.navbar-bright.navbar-fixed-top(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Home
+        nav.collapse.navbar-collapse(role='navigation')
+          ul.nav.navbar-nav
+            each val in nav
+                    li
+                        a(href= val.Link)= val.Text
+          ul.nav.navbar-right.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.glyphicon.glyphicon-search
+              ul.dropdown-menu(style='padding:12px;')
+                form.form-inline
+                  button.btn.btn-default.pull-right(type='submit')
+                    i.glyphicon.glyphicon-search
+                  input.form-control.pull-left(type='text', placeholder='Search')
+    #masthead
+      .container
+        .row
+          .col-md-7
+            h1= title
+      // /cont
+      .container
+        .row
+          .col-md-12
+      // /cont
+    .container
+      .row
+        .col-md-12
+          .panel
+            .panel-body
+              // /stories
+
+              p
+                | RULES
+                br
+                | Follow the rules
+              // /stories
+              a.btn.btn-primary.btnNext(href='books')
+                | View All The Books 
+                i.glyphicon.glyphicon-chevron-right
+        // /col-12
+    hr
+    #footer.container
+      .row
+        .col.col-sm-12
+          h1 Follow Us
+          .btn-group
+            a.btn.btn-twitter.btn-lg(href='#')
+              i.icon-twitter.icon-large
+              |  Twitter
+    hr
+    hr
+    footer
+      .container
+        .row
+             | Made by somebody or other
+

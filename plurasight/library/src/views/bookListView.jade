@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    title Storystrap Template
+    meta(name='generator', content='Bootply')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    //- bower:css
+    link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+    //- endbower
+    //- bower:js
+    script(src='/lib/jquery/dist/jquery.js')
+    script(src='/lib/bootstrap/dist/js/bootstrap.js')
+    //- endbower
+    //- inject:css
+    link(rel="stylesheet", href="/css/styles.css")
+    //- endinject
+    //- inject:js
+    script(src="/js/app.js")
+    //- endinject
+    //if lt IE 9
+      script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+  body
+    header.navbar.navbar-bright.navbar-fixed-top(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Home
+        nav.collapse.navbar-collapse(role='navigation')
+          ul.nav.navbar-nav
+            each val in nav
+                    li
+                        a(href= val.Link)= val.Text
+          ul.nav.navbar-right.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.glyphicon.glyphicon-search
+              ul.dropdown-menu(style='padding:12px;')
+                form.form-inline
+                  button.btn.btn-default.pull-right(type='submit')
+                    i.glyphicon.glyphicon-search
+                  input.form-control.pull-left(type='text', placeholder='Search')
+    #masthead
+      .container
+        .row
+          .col-md-7
+            h1= title
+      // /cont
+      .container
+        .row
+          .col-md-12
+      // /cont
+    .container
+      .row
+        .col-md-12
+          .panel
+            .panel-body
+              // /stories
+              each val, index in books
+                  .row
+                    br
+                    .col-md-2.col-sm-3.text-center
+                      a.story-title(href='#')
+                        img.img-circle(alt='', src='http://api.randomuser.me/portraits/thumb/men/58.jpg', style='width:100px;height:100px')
+                    .col-md-10.col-sm-9
+                      h3= val.title
+                      .row
+                        .col-xs-9
+                          h4
+                            span.label.label-default= val.author
+                          h4
+                            small.text-muted(style="font-family:courier,'new courier';")
+                              | 2 hours ago  • 
+                              a.text-muted(href='/books/#{index}') Read More
+                        .col-xs-3
+                      br
+                      br
+                  hr
+              
+              // /stories
+              a.btn.btn-primary.pull-right.btnNext(href='/')
+                | More 
+                i.glyphicon.glyphicon-chevron-right
+        // /col-12
+    hr
+    #footer.container
+      .row
+        .col.col-sm-12
+          h1 Follow Us
+          .btn-group
+            a.btn.btn-twitter.btn-lg(href='#')
+              i.icon-twitter.icon-large
+              |  Twitter
+            a.btn.btn-facebook.btn-lg(href='#')
+              i.icon-facebook.icon-large
+              |  Facebook
+            a.btn.btn-google-plus.btn-lg(href='#')
+              i.icon-google-plus.icon-large
+              |  Google+
+    hr
+    hr
+    footer
+      .container
+        .row
+          .col-sm-6
+            ul.list-inline
+              li
+                i.icon-facebook.icon-2x
+              li
+                i.icon-twitter.icon-2x
+              li
+                i.icon-google-plus.icon-2x
+              li
+                i.icon-pinterest.icon-2x
+          .col-sm-6
+            p.pull-right
+              | Built with 
+              i.icon-heart-empty
+              |  at 
+              a(href='http://www.bootply.com') Bootply
+    // script references

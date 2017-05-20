@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-/plurasight/*/
-!plurasight/*/js-dev-env/*
 /jsorg
 /array-props
 /treehouse-gulp-basics
