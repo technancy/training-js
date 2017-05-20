@@ -2,7 +2,6 @@
 node_modules
 /plurasight/*/
 !plurasight/*/js-dev-env/*
-/graphy
 /jsorg
 /array-props
 /treehouse-gulp-basics
