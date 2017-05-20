@@ -1,5 +1,5 @@
 .DS_Store
-/plurasight/library/*
+/plurasight/*/library/*
 /graphy
 /grid-maker
 /jsorg
