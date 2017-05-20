@@ -1,0 +1,32 @@
+{
+  "name": "grid-maker",
+  "version": "1.0.0",
+  "description": "ES6 grid UI",
+  "main": "gridmaker.js",
+  "scripts": {
+    "test": "new gridMaker(13).testing();"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/technancy/grid-maker.git"
+  },
+  "keywords": [
+    "grid",
+    "es6"
+  ],
+  "author": "Nancy Richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technancy/grid-maker/issues"
+  },
+  "homepage": "https://github.com/technancy/grid-maker#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+  "build-css": "./bin/build-css",
+  "watch-css": "./bin/watch-css"
+  }
+}
+

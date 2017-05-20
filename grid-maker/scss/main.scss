@@ -1,0 +1,44 @@
+$select: #e6e6ff;
+$outline: #CCC;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Verdana';  
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;  
+  min-width: 400px;
+  font-size: 50%;
+  
+  padding: 1em;
+  text-align: center;
+  
+  [class*="grid-"] {
+    float: left;    
+  }
+  
+  @for $i from 1 through 14 {
+    .grid-#{$i} {
+      width: 0% + (100 / $i);
+      height: 0% + (100 / $i);
+    }
+  }  
+}
+
+#grid {
+  width: 100%;
+  span {
+    display: inline-block;
+    border: 0.1em dotted $outline;
+    padding: 1em;
+    cursor: hand;
+    &:hover{
+      background: $select;
+    }
+  }
+}
